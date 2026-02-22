@@ -1,0 +1,235 @@
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Floating Buttons */
+.floating-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.floating-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+.floating-btn:hover {
+    transform: scale(1.1);
+    color: white;
+}
+.btn-wa {
+    background-color: #25D366;
+}
+.btn-up {
+    background-color: #007bff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    cursor: pointer;
+    border: none;
+}
+.btn-up.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Navbar */
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+/* Article Content */
+.article-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+@media (max-width: 768px) {
+    .article-content {
+        padding: 1rem;
+    }
+}
+.article-content h2, .article-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.article-content h1 {
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0 0.5rem 0;
+    display: block;
+}
+.image-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+/* TOC */
+.toc-wrapper {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toc-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.toc-toggle {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+}
+.toc-body {
+    margin-top: 1rem;
+    display: none;
+}
+.toc-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.toc-list li {
+    margin-bottom: 0.5rem;
+}
+.toc-h2 {
+    font-weight: 600;
+}
+.toc-h3 {
+    font-size: 0.95em;
+    padding-left: 1.5rem;
+}
+
+/* Blockquote */
+.article-content blockquote {
+    border-left: 5px solid #007bff;
+    padding: 1rem 1.5rem;
+    background: #e9ecef;
+    margin: 2rem 0;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+    font-size: 1.15rem;
+}
+
+/* Author Box */
+.author-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: 3rem 0;
+    border-left: 5px solid #007bff;
+}
+.author-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.author-info h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+.author-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Share Buttons */
+.share-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 2rem 0;
+}
+.share-btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.share-wa { background: #25D366; }
+.share-fb { background: #1877F2; }
+.share-tw { background: #1DA1F2; }
+.share-btn:hover { color: #fff; opacity: 0.9; }
+
+/* Responsive Footer */
+footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 3rem 0 1rem 0;
+}
+footer a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/hero-bg.jpg') center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
